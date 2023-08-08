@@ -13,7 +13,7 @@ module.exports = {
         const sentence = interaction.options.getString('sentence', true);
         console.log(sentence);
 
-        await require('../../utils/getUwu.js').then(
+        await require('../../utils/uwuImportConversion.js').then(
             ([{ default: index }]) => {
                 const uwuifier = new index({
                     spaces: {
