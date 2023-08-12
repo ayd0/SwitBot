@@ -1,7 +1,7 @@
-const makeUwu = (slurs) => require("./uwuImportConversion.js").then(([{ default: Index }]) => {
+const makeUwu = (msg) => require("./uwuImportConversion.js").then(([{ default: Index }]) => {
     const uwuifier = new Index({
         spaces: {
-            faces: 0.005,
+            faces: 0.15,
             actions: 0.05,
             stutters: 0.2,
         },
@@ -9,7 +9,7 @@ const makeUwu = (slurs) => require("./uwuImportConversion.js").then(([{ default:
         exclamations: 1,
     });
 
-    return uwuifier.uwuifySentence(slurs);
+    return uwuifier.uwuifySentence(msg);
 });
 
 module.exports = makeUwu;
